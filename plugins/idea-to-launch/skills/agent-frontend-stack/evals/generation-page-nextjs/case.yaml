@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: generation-page-nextjs
+expected_outcome: |
+  在 weekly-web/ 下给出 Next.js App Router + TypeScript 的生成页代码。后端状态在适配层映射为统一前端状态，SSE 关闭而未收到 done 时视为断线并按任务 ID 回查；提交期间防重复提交；任务 ID 放在 URL，刷新后从后端恢复；接口调用集中在 API 层，不在组件里散落 fetch；错误按 code 转成用户文案；加载中与无数据分开；不在 NEXT_PUBLIC_ 变量里放密钥；等待确认时说明要确认什么。

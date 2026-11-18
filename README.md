@@ -165,6 +165,7 @@
 ├── docs/                        ← 所有产品共用，给 AI 读
 │   ├── PRD模板.md               ← 没有 PRD 时，AI 照它问你问题
 │   └── 手册/                    ← 三份技术手册
+├── plugins/                     ← Claude Code 插件（可选，见下方"单独使用技术规范"）
 └── projects/                    ← 你的产品，一个产品一个文件夹
     └── 我的第一个产品/
         └── docs/
@@ -175,6 +176,17 @@
 ```
 
 每个文件夹里都有一份《说明.md》，写着这里放什么、谁来放。开工后，AI 会在产品文件夹里创建 `docs/项目状态.md`（进度和决策记录）和代码文件夹（`backend/`、`frontend/` 等）。
+
+### 单独使用技术规范（Claude Code 插件，可选）
+
+通用技术栈手册和前端技术栈手册剥离流程后，做成了两个 Claude Code 技能：`agent-tech-stack`（后端基线、工程底线、双层验收）和 `agent-frontend-stack`（Web 前端栈、Agent 任务状态、交付检查），在工具包之外的任何 AI 产品项目里都能用。用这个工具包开工不需要装它。
+
+```text
+/plugin marketplace add hubooooooo/idea-to-launch-kit
+/plugin install idea-to-launch@idea-to-launch-kit
+```
+
+说明和手册同步清单见 [plugins/idea-to-launch/README.md](./plugins/idea-to-launch/README.md)。
 
 ## ❓ 常见问题
 
