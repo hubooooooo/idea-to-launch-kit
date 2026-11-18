@@ -1,0 +1,14 @@
+{
+  "name": "idea-to-launch-kit",
+  "description": "AI 产品从想法到上线工具包的 Claude Code 插件",
+  "owner": {
+    "name": "hubooooooo"
+  },
+  "plugins": [
+    {
+      "name": "idea-to-launch",
+      "source": "./plugins/idea-to-launch",
+      "description": "AI Agent 产品的工程规范：agent-tech-stack 管后端技术基线、工程底线和双层验收，agent-frontend-stack 管 Web 前端技术栈、Agent 任务状态与交付检查。"
+    }
+  ]
+}

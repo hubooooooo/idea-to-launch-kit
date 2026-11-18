@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: kb-qa-backend-plan
+expected_outcome: |
+  给出技术方案文档和 kb-assistant/ 下的后端代码。方案采用 FastAPI + Pydantic + pytest 默认栈，说明按需引入的模块及触发原因；问答接口用 SSE 且以 done 或 error 收尾，包括模型客户端初始化失败；错误统一为 {"error":{"code","message"}}；Key 从 .env 读取不硬编码；上传校验类型和大小；数据带归属字段并持久化；附带 mock 模型的 pytest 测试，并说明真实模型冒烟的做法。

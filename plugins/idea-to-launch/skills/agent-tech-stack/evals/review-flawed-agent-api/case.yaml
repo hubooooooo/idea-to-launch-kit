@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: review-flawed-agent-api
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  review.md 按严重程度列出问题并给出改法，至少指出：硬编码的真实 Key；任务状态只存在内存字典；异常时把堆栈返回给用户、错误格式不统一；模型输出没做结构校验；模型调用没有超时与有限重试；SSE 不以 done/error 收尾、流中失败静默断开；上传未校验类型大小且文件名可路径遍历；发布这一对外动作交给模型判断、缺少人工确认，且 os.system 拼接参数有注入风险；数据没有归属字段。
